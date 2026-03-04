@@ -1,6 +1,7 @@
 import { Outlet, Link, useLocation } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { TextWaveHover } from "../components/TextWaveHover";
 
 export default function Layout() {
   const location = useLocation();
@@ -20,19 +21,18 @@ export default function Layout() {
       {/* Navigation Bar */}
       <nav
         ref={navRef}
-        className="fixed top-0 w-full z-50 transition-all duration-300 bg-[#F1EFE7] border-b border-[#0000001A]"
+        className="fixed top-0 w-full z-50 transition-all duration-300 bg-[#F1EFE7]"
       >
         <div className="w-full px-6 h-20 flex items-center justify-between">
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center text-4xl font-black tracking-tighter text-black hover:opacity-80 transition-opacity"
+            className="flex items-center text-4xl font-anton tracking-tighter text-black hover:opacity-80 transition-opacity"
             style={{
-              fontFamily: "'Impact', 'Arial Black', sans-serif",
               letterSpacing: "-0.05em",
             }}
           >
-            BK
+            DK
           </Link>
 
           {/* Centered Links */}
@@ -40,11 +40,11 @@ export default function Layout() {
             <li key="Portfolio">
               <Link
                 to="/projects"
-                className={`relative flex items-center px-2 py-2 text-[16px] tracking-widest font-medium transition-colors hover:text-black uppercase
+                className={`relative flex items-center px-2 py-2 text-[18px] tracking-widest font-medium transition-colors hover:text-black uppercase
                   ${location.pathname === "/projects" ? "text-black" : "text-black/70"}
                 `}
               >
-                PORTFOLIO
+                <TextWaveHover text="PORTFOLIO" />
                 {location.pathname === "/projects" && (
                   <span className="absolute bottom-0 left-0 w-full h-[1px] bg-black" />
                 )}
@@ -53,11 +53,11 @@ export default function Layout() {
             <li key="My Process">
               <Link
                 to="/about"
-                className={`relative flex items-center px-2 py-2 text-[16px] tracking-widest font-medium transition-colors hover:text-black uppercase
+                className={`relative flex items-center px-2 py-2 text-[18px] tracking-widest font-medium transition-colors hover:text-black uppercase
                   ${location.pathname === "/about" ? "text-black" : "text-black/70"}
                 `}
               >
-                MY PROCESS
+                <TextWaveHover text="MY PROCESS" />
                 {location.pathname === "/about" && (
                   <span className="absolute bottom-0 left-0 w-full h-[1px] bg-black" />
                 )}
@@ -66,11 +66,11 @@ export default function Layout() {
             <li key="About">
               <Link
                 to="/contact"
-                className={`relative flex items-center px-2 py-2 text-[16px] tracking-widest font-medium transition-colors hover:text-black uppercase
+                className={`relative flex items-center px-2 py-2 text-[18px] tracking-widest font-medium transition-colors hover:text-black uppercase
                   ${location.pathname === "/contact" ? "text-black" : "text-black/70"}
                 `}
               >
-                ABOUT
+                <TextWaveHover text="ABOUT" />
                 {location.pathname === "/contact" && (
                   <span className="absolute bottom-0 left-0 w-full h-[1px] bg-black" />
                 )}
@@ -81,7 +81,7 @@ export default function Layout() {
           {/* Let's Talk Button */}
           <Link
             to="/contact"
-            className="flex items-center bg-[#1A1A1A] text-white hover:bg-black transition-colors rounded-[4px] overflow-hidden"
+            className="flex items-center bg-[#1A1A1A] text-white hover:bg-black transition-colors rounded-[4px] overflow-hidden p-2"
           >
             <div className="h-full">
               <img
