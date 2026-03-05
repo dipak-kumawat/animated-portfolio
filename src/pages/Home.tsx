@@ -17,7 +17,7 @@ export default function HomePage() {
         style={{
           background:
             "linear-gradient(to top, #FF5A26 0%, rgba(255, 90, 38, 0.7) 40%, rgba(255, 90, 38, 0) 100%)",
-        }}
+        }} 
       />
 
       <div className="relative z-0 w-full flex items-start pt-5 justify-center px-6">
