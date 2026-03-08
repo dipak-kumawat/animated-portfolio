@@ -15,7 +15,7 @@ export default function Layout() {
       { y: 0, opacity: 1, duration: 0.8, ease: "power3.out" },
     );
   }, []);
-
+ 
   return (
     <div className="min-h-screen bg-[#F1EFE7] text-slate-900 flex flex-col font-sans selection:bg-indigo-500/30">
       {/* Navigation Bar */}
