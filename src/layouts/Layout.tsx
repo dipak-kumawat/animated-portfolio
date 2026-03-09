@@ -40,7 +40,7 @@ export default function Layout() {
             <li key="Portfolio">
               <Link
                 to="/projects"
-                className={`relative flex items-center px-2 py-2 text-[18px] tracking-widest font-medium transition-colors hover:text-black uppercase
+                className={`relative flex items-center px-2 py-2 text-[16px] tracking-widest font-medium transition-colors hover:text-black uppercase
                   ${location.pathname === "/projects" ? "text-black" : "text-black/70"}
                 `}
               >
@@ -53,7 +53,7 @@ export default function Layout() {
             <li key="My Process">
               <Link
                 to="/about"
-                className={`relative flex items-center px-2 py-2 text-[18px] tracking-widest font-medium transition-colors hover:text-black uppercase
+                className={`relative flex items-center px-2 py-2 text-[16px] tracking-widest font-medium transition-colors hover:text-black uppercase
                   ${location.pathname === "/about" ? "text-black" : "text-black/70"}
                 `}
               >
@@ -66,7 +66,7 @@ export default function Layout() {
             <li key="About">
               <Link
                 to="/contact"
-                className={`relative flex items-center px-2 py-2 text-[18px] tracking-widest font-medium transition-colors hover:text-black uppercase
+                className={`relative flex items-center px-2 py-2 text-[16px] tracking-widest font-medium transition-colors hover:text-black uppercase
                   ${location.pathname === "/contact" ? "text-black" : "text-black/70"}
                 `}
               >
